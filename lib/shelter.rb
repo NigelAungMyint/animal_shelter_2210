@@ -23,4 +23,8 @@ attr_reader :name, :capacity, :pets
       false
     end
   end
+
+  def adopt(pet)
+    @pets.delete(pet)
+  end
 end
