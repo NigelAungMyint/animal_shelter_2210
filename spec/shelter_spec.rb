@@ -79,7 +79,25 @@ RSpec.describe Shelter do
         expect(shelter.pets.length).to eq 6
         expect(shelter.over_capacity?).to be true
       end
+    end
 
+    describe '#adopt' do
+      it 'can remove pets from shelter' do
+        shelter = Shelter.new('Denver Animal Shelter', 5)
+        shelter.add_pet('Salem')
+        shelter.add_pet('Beethoven')
+        shelter.add_pet('Spot')
+        shelter.add_pet('Jonesy')
+        shelter.add_pet('Wishbone')
+        shelter.add_pet('Dogmeat')
 
+        expect(shelter.pets.length).to eq 6
+        expect(shelter.over_capacity?).to be true
+
+        shelter.adopt('Dogmeat')
+
+        expect(shelter.pets.length).to eq 5
+        expect(shelter.over_capacity?).to be false
+      end
     end
 end
