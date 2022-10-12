@@ -25,11 +25,7 @@ attr_reader :name, :capacity, :pets
   end
 
   def over_capacity?
-    if pets.length > capacity
-      true
-    else
-      false
-    end
+   pets.length > capacity
   end
 
   def adopt
