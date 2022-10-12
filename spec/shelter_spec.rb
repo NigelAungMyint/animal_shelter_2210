@@ -89,7 +89,7 @@ RSpec.describe Shelter do
     end
 
     describe '#adopt' do
-      it 'can remove pets from shelter' do
+      it 'will adopt dogs until not over capacity' do
         shelter = Shelter.new('Denver Animal Shelter', 5)
         shelter.add_pet('Salem')
         shelter.add_pet('Beethoven')
