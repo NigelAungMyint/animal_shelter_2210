@@ -26,6 +26,13 @@ RSpec.describe Shelter do
       expect(shelter.capacity).to eq(5)
     end
 
+    it 'has a minimum capacity of 1' do
+
+      shelter = Shelter.new('Austin Pets Alive!', 0)
+
+      expect(shelter.capacity).to eq(1)
+    end
+
     it 'has no pets by default' do
 
 
