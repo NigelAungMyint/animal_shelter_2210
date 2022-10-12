@@ -101,19 +101,13 @@ RSpec.describe Shelter do
         expect(shelter.pets.length).to eq 6
         expect(shelter.over_capacity?).to be true
 
-        shelter.adopt('Dogmeat')
+        shelter.adopt
 
         expect(shelter.pets.length).to eq 5
         expect(shelter.over_capacity?).to be false
-      end
-
-      it 'says no to adoption if pet is not at shelter' do
-        shelter = Shelter.new('Denver Animal Shelter', 5)
-        shelter.add_pet('Dogmeat')
-
-        expect(shelter.adopt('Dogmeat')).to eq("Congratulations on bringing Dogmeat home with you!")
-        expect(shelter.adopt('Wishbone')).to eq("Sorry that dog isn't at our shelter")
 
       end
+
+
     end
 end
