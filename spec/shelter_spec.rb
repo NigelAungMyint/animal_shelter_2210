@@ -27,7 +27,7 @@ RSpec.describe Shelter do
     end
 
     it 'has no pets by default' do
-      
+
 
       shelter = Shelter.new('Denver Animal Shelter', 5)
       expect(shelter.pets).to eq []
@@ -37,7 +37,7 @@ RSpec.describe Shelter do
   # Iteration 2
   describe '#add_pet' do
     it 'returns a list of pets' do
-      skip
+      
 
       shelter = Shelter.new('Denver Animal Shelter', 5)
       shelter.add_pet('Salem')
