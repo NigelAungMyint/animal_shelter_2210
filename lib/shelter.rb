@@ -2,8 +2,16 @@ class Shelter
 attr_reader :name, :capacity, :pets
   def initialize(name, capacity)
     @name = name
-    @capacity = capacity
+    @capacity = sanitize_capacity(capacity)
     @pets = []
+  end
+
+  def sanitize_capacity(capacity)
+    if capacity < 1
+      @capacity = 1
+    else
+      @capacity = capacity
+    end
   end
 
   def add_pet(pet)
