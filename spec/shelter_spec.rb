@@ -37,7 +37,7 @@ RSpec.describe Shelter do
   # Iteration 2
   describe '#add_pet' do
     it 'returns a list of pets' do
-      
+
 
       shelter = Shelter.new('Denver Animal Shelter', 5)
       shelter.add_pet('Salem')
@@ -51,7 +51,7 @@ RSpec.describe Shelter do
 
   describe '#call_pets' do
       it 'returns a list of names with exclamation points appended' do
-        skip
+        
 
         shelter = Shelter.new('Denver Animal Shelter', 5)
         shelter.add_pet('Salem')
