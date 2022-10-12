@@ -70,11 +70,13 @@ RSpec.describe Shelter do
         shelter.add_pet('Beethoven')
         shelter.add_pet('Spot')
         shelter.add_pet('Jonesy')
-
+        shelter.add_pet('Wishbone')
+        expect(shelter.pets.length).to eq 5
         expect(shelter.over_capacity?).to be false
 
-        shelter.add_pet('Wishbone')
+        shelter.add_pet('Dogmeat')
 
+        expect(shelter.pets.length).to eq 6
         expect(shelter.over_capacity?).to be true
       end
 
