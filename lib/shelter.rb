@@ -25,6 +25,11 @@ attr_reader :name, :capacity, :pets
   end
 
   def adopt(pet)
-    @pets.delete(pet)
+    if @pets.delete(pet) == nil
+      "Sorry that dog isn't at our shelter"
+    else
+      @pets.delete(pet)
+      "Congratulations on bringing #{pet} home with you!"
+    end
   end
 end
