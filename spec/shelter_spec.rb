@@ -103,10 +103,11 @@ RSpec.describe Shelter do
 
         shelter.adopt
 
-        expect(shelter.pets.length).to eq 0
+        expect(shelter.pets.length).to eq 5
         expect(shelter.over_capacity?).to be false
+
       end
 
-      
+
     end
 end
