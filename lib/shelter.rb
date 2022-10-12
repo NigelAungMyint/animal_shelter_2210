@@ -15,4 +15,12 @@ attr_reader :name, :capacity, :pets
       pet + '!'
     end
   end
+
+  def over_capacity?
+    if pets.length > capacity
+      true
+    else
+      false
+    end
+  end
 end
